@@ -81,6 +81,4 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           186M     0  186M   0% /run/shm
 /dev/mmcblk0p1   56M   19M   37M  34% /boot
 pi@raspberrypi ~ $
-
-Plug the Micro SD Card in the Raspberry Pi, yPlug the Micro SD Card in the Raspberry Pi,
 ```
