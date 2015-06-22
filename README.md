@@ -101,3 +101,46 @@ Update your system with `apt-get`:
 sudo apt-get update
 sudo apt-get upgrade
 ```
+
+### Network configuration
+
+Configure your Wifi:
+```shell
+pi@rpi2 ~ $ sudo vi /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+`/etc/wpa_supplicant/wpa_supplicant.conf`:
+```
+network={
+        ssid="your_wifi_SSID"
+        psk="your_wifi_password"
+}
+```
+
+Restart your Wifi interface:
+```shell
+pi@rpi2 ~ $ sudo ifdown wlan0
+pi@rpi2 ~ $ sudo ifup wlan0
+```
+
+### Perl configuration
+
+The Perl version on Raspbian is 5.14:
+```
+pi@rpi2 ~ $ perl -v
+
+This is perl 5, version 14, subversion 2 (v5.14.2) built for arm-linux-gnueabihf-thread-multi-64int
+(with 89 registered patches, see perl -V for more detail)
+```
+
+#### CPANMinus installation
+
+```shell
+curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+```
+
+#### Mojolicious installation
+
+```shell
+sudo cpanm Mojolicious
+```
