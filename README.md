@@ -7,7 +7,8 @@ Raspberry Pi + Pretty Rabbit
   * Micro SD Card (8 Gb) with its Micro to SDCard Adapter
   * Wifi dongle
   * Camera
-  
+  * my old Nabaztag
+
 ## Software
 
 ### Operating System
@@ -81,4 +82,22 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 tmpfs           186M     0  186M   0% /run/shm
 /dev/mmcblk0p1   56M   19M   37M  34% /boot
 pi@raspberrypi ~ $
+```
+
+### System Configuration
+
+You can configure your system with a simple interface `raspi-config`:
+```
+sudo raspi-config
+```
+
+  * Change your password (2)
+  * Change your Internationalisation Options (4) / Timezone (I2)
+  * Change your Hostname (8) / (A2)
+  * Enable the Camera Support (5)
+ 
+Update your system with `apt-get`:
+```
+sudo apt-get update
+sudo apt-get upgrade
 ```
