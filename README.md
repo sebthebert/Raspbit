@@ -143,4 +143,5 @@ curl -L https://cpanmin.us | perl - --sudo App::cpanminus
 
 ```shell
 sudo cpanm Mojolicious
+sudo cpanm Mojolicious::Plugin::TtRenderer::Engine
 ```
