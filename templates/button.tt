@@ -1,0 +1,2 @@
+<a href="[% url %]" class="btn btn-primary btn-lg btn-block" role="button">
+<i class="fa fa-[% icon %]"></i> [% label %] </a>

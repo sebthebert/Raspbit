@@ -1,0 +1,10 @@
+<div class="btn-group">	
+[% INCLUDE 'button.tt' 
+	url="/camera" icon="camera" label="Take a Photo" %]
+[% INCLUDE 'button.tt' 
+	url="/videocamera" icon="video-camera" label="Record a Video" %]
+[% INCLUDE 'button.tt' 
+    url="/photos" icon="camera" label="Photos" %]
+[% INCLUDE 'button.tt'
+    url="/videos" icon="video-camera" label="Videos" %]
+</div>
