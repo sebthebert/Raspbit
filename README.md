@@ -43,7 +43,7 @@ Unmount of all volumes on disk1 was successful
 
 Copy your Raspbian image with `dd`, it takes looong time (~35 minutes in my case):
 ```shell
-imac:~ seb$ sudo dd if=/Users/seb/Downloads/2015-05-05-raspbian-wheezy.img of=/dev/disk1 bs=2m
+imac:~ seb$ sudo dd if=/Users/seb/Downloads/2015-09-24-raspbian-jessie.img of=/dev/disk1 bs=2m
 Password:
 dd1562+1 records in
 1562+1 records out
