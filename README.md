@@ -15,10 +15,13 @@ Raspberry Pi + Pretty Rabbit
 
 Download the [latest release of Raspbian](http://downloads.raspberrypi.org/raspbian_latest) (based on Debian Wheezy / kernel version 3.18).
 
-On my Mac, Disk Utility.
+On my Mac: 
+```
+Applications -> Utilities -> Disk Utility.
 Erase
 Format: MS-DOS (FAT)
-Name: RPI2
+Name: RASPBERRY2
+```
 
 Get your SDCard partion with `diskutil list`:
 ```shell
@@ -32,7 +35,7 @@ imac:~ seb$ diskutil list
 /dev/disk1
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:     FDisk_partition_scheme                        *8.0 GB     disk1
-   1:                 DOS_FAT_32 RPI2                    8.0 GB     disk1s1
+   1:                 DOS_FAT_32 RASPBERRY2              8.0 GB     disk1s1
 ```
 
 Unmout your SDCard partition with `diskutil unmountdisk`:
@@ -43,11 +46,18 @@ Unmount of all volumes on disk1 was successful
 
 Copy your Raspbian image with `dd`, it takes looong time (~35 minutes in my case):
 ```shell
-imac:~ seb$ sudo dd if=/Users/seb/Downloads/2015-09-24-raspbian-jessie.img of=/dev/disk1 bs=2m
+imac:~ seb$ sudo dd if=/Users/seb/Downloads/2015-05-05-raspbian-wheezy.img of=/dev/disk1 bs=2m
 Password:
 dd1562+1 records in
 1562+1 records out
 3276800000 bytes transferred in 2127.989635 secs (1539857 bytes/sec)
+```
+
+Then eject it:
+```shell
+imac:~ seb$ sudo diskutil eject /dev/disk1
+Password:
+Disk /dev/disk1 ejected
 ```
 
 Plug the Micro SD Card in the Raspberry Pi and power on.
