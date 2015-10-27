@@ -123,6 +123,8 @@ tmpfs           173M     0  173M   0% /run/shm
 Update your system with `rpi-update` and `apt-get`:
 ```
 sudo rpi-update
+sudo reboot
+
 sudo apt-get update
 sudo apt-get upgrade
 ```
