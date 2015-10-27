@@ -166,10 +166,16 @@ This is perl 5, version 14, subversion 2 (v5.14.2) built for arm-linux-gnueabihf
 curl -L https://cpanmin.us | perl - --sudo App::cpanminus
 ```
 
-#### Mojolicious installation
+#### Mojolicious & Path::Tiny installation
 
 ```shell
 sudo cpanm Mojolicious
 sudo cpanm Mojolicious::Plugin::TtRenderer::Engine
 sudo cpanm Path::Tiny
+```
+
+#### Raspbit Installation
+
+```shell
+git clone https://github.com/sebthebert/Raspbit.git
 ```
