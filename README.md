@@ -108,8 +108,21 @@ sudo raspi-config
  
 And then Reboot.
 
-Update your system with `apt-get`:
+After expanding filesystem...
 ```
+pi@rpi2 ~ $ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          7.2G  2.4G  4.5G  35% /
+/dev/root       7.2G  2.4G  4.5G  35% /
+devtmpfs        428M     0  428M   0% /dev
+tmpfs            87M  244K   87M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           173M     0  173M   0% /run/shm
+/dev/mmcblk0p1   56M   19M   37M  34% /boot
+```
+Update your system with `rpi-update` and `apt-get`:
+```
+sudo rpi-update
 sudo apt-get update
 sudo apt-get upgrade
 ```
