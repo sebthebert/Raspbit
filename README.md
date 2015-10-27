@@ -100,12 +100,14 @@ You can configure your system with a simple interface `raspi-config`:
 ```
 sudo raspi-config
 ```
-
+  * Expand Filesystem (1)
   * Change your password (2)
   * Change your Internationalisation Options (4) / Timezone (I2)
-  * Change your Hostname (8) / (A2)
+  * Change your Hostname (8) / (A2) -> 'rpi2'
   * Enable the Camera Support (5)
  
+And then Reboot.
+
 Update your system with `apt-get`:
 ```
 sudo apt-get update
